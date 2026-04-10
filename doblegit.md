@@ -38,8 +38,11 @@ git remote -v
 Resultado esperado:
 
 gitlab  https://asimov.cncps.gob.ar/usuario/proyecto.git (fetch)
+
 gitlab  https://asimov.cncps.gob.ar/usuario/proyecto.git (push)
+
 origin  https://github.com/USUARIO/REPO.git (fetch)
+
 origin  https://github.com/USUARIO/REPO.git (push)
 
 ---
@@ -47,6 +50,7 @@ origin  https://github.com/USUARIO/REPO.git (push)
 ## 5. Subir a GitHub (origin)
 
 git branch -M main
+
 git push -u origin main
 
 ---
@@ -62,10 +66,13 @@ git push -u gitlab main
 ## Caso típico (laburando tranquilo)
 
 git add .
+
 git commit -m "feat: cambios importantes"
+
 git push origin main
 
 (opcional backup institucional)
+
 git push gitlab main
 
 ---
@@ -73,6 +80,7 @@ git push gitlab main
 # ⚡ Pro tip: push a ambos remotos en un solo comando
 
 git remote set-url --add --push origin https://github.com/USUARIO/REPO.git
+
 git remote set-url --add --push origin https://asimov.cncps.gob.ar/usuario/proyecto.git
 
 Ahora esto:
@@ -95,6 +103,7 @@ No se cae todo el comando, pero ojo:
 👉 Solución: push manual separado
 
 git push origin main
+
 git push gitlab main
 
 ---
@@ -127,8 +136,11 @@ git pull --rebase origin main
 # 🧩 Resumen express
 
 git remote rename origin gitlab
+
 git remote add origin https://github.com/USUARIO/REPO.git
+
 git push origin main
+
 git push gitlab main
 
 ---
